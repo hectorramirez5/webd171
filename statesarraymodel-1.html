@@ -4,7 +4,7 @@
 <body>
 
     <select id="list">
-        <option value=""></option>
+        <option value="">Choose a state</option>
     </select>
 
 <script>
@@ -70,13 +70,15 @@ const usStates = [
     { name: 'WYOMING', abbreviation: 'WY' }
 ]
 
-const states = usStates.map(state => ({abbreviation: state.abbreviation}));
-const statesUSA = usStates.map(statee => ({name: statee.name}));
+const states = usStates.map(state => document.getElementById("list").innerHTML 
+    += '<option value = "' + state.abbreviation + '">' + state.name + '</option>');
+
+//const statesUSA = usStates.map(statee => ({name: statee.name}));
 
 console.log(states);
-console.log(statesUSA);
+//console.log(statesUSA);
 
-document.getElementById("list").innerHTML = usStates.map(); //My attempt to get the values to the DOM
+//document.getElementById("list").innerHTML = usStates.map(); //My attempt to get the values to the DOM
 
 
 
